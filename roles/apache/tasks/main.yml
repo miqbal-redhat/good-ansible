@@ -1,0 +1,11 @@
+---
+- name: deploy apache
+  hosts: apps
+  gather_facts: false
+  become: true
+  hosts: apps
+  tasks:
+  - name: install apache
+    yum:
+      name: httpd
+      state: latest

@@ -1,0 +1,6 @@
+---
+- name: install postgres
+  hosts: appdbs
+   yum:
+      name: postgresql-server
+      state: latest
